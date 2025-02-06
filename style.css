@@ -1,0 +1,338 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:700);
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+.container{
+  width: 70vw;
+  margin: auto;
+}
+
+.weather__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+input {
+  border: none;
+  background: #1e1e1e;
+  outline: none;
+  color: #fff;
+  /* padding: 0.5rem 2.5rem; */
+  border-radius: 5px;
+}
+
+input::placeholder {
+  color: #fff;
+}
+
+.weather__search {
+  position: relative;
+}
+
+.weather__search i {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  font-size: 15px;
+  color: #fff;
+}
+
+.weather__units {
+  font-size: 1.5rem;
+}
+
+.weather__units span {
+  cursor: pointer;
+}
+
+.weather__units span:first-child {
+  margin-right: 0.5rem;
+}
+
+.weather__body {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.weather__datetime {
+  margin-bottom: 2rem;
+  font-size: 14px;
+}
+
+.weather__forecast {
+  background: #1e1e1e;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 30px;
+}
+
+.weather__icon img {
+  width: 100px;
+}
+
+.weather__temperature {
+  font-size: 1.75rem;
+}
+
+.weather__minmax {
+  display: flex;
+  justify-content: center;
+}
+
+.weather__minmax p {
+  font-size: 14px;
+  margin: 0.5rem;
+}
+
+.weather__info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+  margin-top: 3rem;
+}
+
+.weather__card {
+  display: flex;
+  align-items: center;
+  background: #1e1e1e;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+}
+
+.weather__card i {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+
+.weather__card p {
+  font-size: 14px;
+}
+
+@media (max-width: 936px) {
+  .container {
+    width: 90%;
+  }
+
+  .weather__header {
+    flex-direction: column;
+  }
+
+  .weather__units {
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .weather__info {
+    grid-template-columns: none;
+  }
+}
+body {
+  background-color: #0b1019;
+}
+#main-center {
+  font-family: "Roboto Slab", serif;
+  color: #00698c;
+  margin-top: 1em;
+  margin-bottom: 4em;
+}
+#frame {
+  color: white;
+  background-color: #152030;
+  padding: 2.5em;
+  border-radius: 25px;
+}
+#weather {
+  font-size: 3em;
+}
+.night {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#133f72+0,0b344f+20,152030+49,0b344f+80,133f72+100 */
+  background: rgb(19, 63, 114); /* Old browsers */
+  background: -moz-linear-gradient(
+    -45deg,
+    rgba(19, 63, 114, 1) 0%,
+    rgba(11, 52, 79, 1) 20%,
+    rgba(21, 32, 48, 1) 49%,
+    rgba(11, 52, 79, 1) 80%,
+    rgba(19, 63, 114, 1) 100%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    -45deg,
+    rgba(19, 63, 114, 1) 0%,
+    rgba(11, 52, 79, 1) 20%,
+    rgba(21, 32, 48, 1) 49%,
+    rgba(11, 52, 79, 1) 80%,
+    rgba(19, 63, 114, 1) 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    135deg,
+    rgba(19, 63, 114, 1) 0%,
+    rgba(11, 52, 79, 1) 20%,
+    rgba(21, 32, 48, 1) 49%,
+    rgba(11, 52, 79, 1) 80%,
+    rgba(19, 63, 114, 1) 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#133f72', endColorstr='#133f72',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+.day {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#b3dced+0,29b8e5+50,bce0ee+100;Blue+Pipe */
+  background: rgb(179, 220, 237); /* Old browsers */
+  background: -moz-linear-gradient(
+    left,
+    rgba(179, 220, 237, 1) 0%,
+    rgba(41, 184, 229, 1) 50%,
+    rgba(188, 224, 238, 1) 100%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    left,
+    rgba(179, 220, 237, 1) 0%,
+    rgba(41, 184, 229, 1) 50%,
+    rgba(188, 224, 238, 1) 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    to right,
+    rgba(179, 220, 237, 1) 0%,
+    rgba(41, 184, 229, 1) 50%,
+    rgba(188, 224, 238, 1) 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3dced', endColorstr='#bce0ee',GradientType=1 ); /* IE6-9 */
+}
+#button-area {
+  margin: 1em 0;
+}
+button {
+  position: relative;
+  padding: 0.5em 15px;
+  outline: 0;
+  background-color: #00698c;
+  color: white;
+  cursor: pointer;
+  border: none;
+  border-bottom: 5px solid #0093c4;
+  border-radius: 25px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: allw 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+button:hover {
+  background-color: #005875;
+}
+button:active {
+  background-color: #005875;
+  border-bottom: none;
+}
+.active {
+  background-color: #003b4f;
+  top: 5px;
+  border: none;
+  transition: all 0.8s ease-out;
+}
+
+a {
+  color: white;
+}
+#cityForm {
+  display: flex;
+}
+#cityForm button {
+  position: relative;
+  top: 20px;
+}
+.form {
+  width: 30%;
+  position: relative;
+  top: 20px;
+  margin-left: 20px;
+}
+
+.form input {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  /* padding-top: 20px; */
+  font-size: 20px;
+  border: none;
+  background-color: #0b1019;
+  border-radius: 50px;
+}
+.form label {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-bottom: 1px solid #003b4f;
+}
+.form label::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  transform: translateX(-100%);
+  border-bottom: 3px solid white;
+  transition: all 0.3s ease;
+}
+.content-name {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  padding-bottom: 5px;
+  transition: all 0.3s ease;
+}
+.form input:focus {
+  outline: none;
+}
+.form input:focus + .label-name .content-name,
+.form input:valid + .label-name .content-name {
+  transform: translateY(-130%);
+  font-size: 14px;
+  left: 0px;
+  color: #00698c;
+}
+.form input:focus + .label-name::after,
+.form input:valid + .label-name::after {
+  transform: translateX(0%);
+}
+.weatherdata {
+  display: flex;
+  gap: 12px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.weatherdata > div {
+  flex: 1 1 22%;
+}
+
+@media (max-width: 1024px) {
+  .weatherdata > div {
+    flex: 1 1 30%;
+  }
+}
+
+@media (max-width: 768px) {
+  .weatherdata > div {
+    flex: 1 1 45%;
+  }
+}
+
+@media (max-width: 480px) {
+  .weatherdata > div {
+    flex: 1 1 90%;
+  }
+}
+
+.weatherdata * {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.weather__card .data {
+  font-size: 30px;
+  margin: 10px 0;
+}

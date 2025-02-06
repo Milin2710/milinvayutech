@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/skycons/1396634940/skycons.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div id="main-center" class="container text-center">
+      <div id="app-header">
+        <h1>Weather App!</h1>
+      </div>
+      <div id="frame">
+        <div id="screen">
+          <h2 id="weather"><span id="cel"></span><span id="far"></span></h2>
+          <figure class="icons">
+            <canvas id="icon" width="120" height="120"></canvas>
+            <figcaption id="conditions"></figcaption>
+          </figure>
+          <div class="weatherdata">
+            <div class="weather__card">
+              <i class="fa-solid fa-temperature-full"></i>
+              <div>
+                <p>Feels Like</p>
+                <p id="realfeel" class="data weather__realfeel">Loading...</p>
+              </div>
+            </div>
+            <div class="weather__card">
+              <i class="fa-solid fa-droplet"></i>
+              <div>
+                <p>Humidity</p>
+                <p id="humidity" class="data weather__humidity">Loading...</p>
+              </div>
+            </div>
+            <div class="weather__card">
+              <i class="fa-solid fa-wind"></i>
+              <div>
+                <p>Wind</p>
+                <p id="wind" class="data weather__wind">Loading...</p>
+              </div>
+            </div>
+            <div class="weather__card">
+              <i class="fa-solid fa-gauge-high"></i>
+              <div>
+                <p>Pressure</p>
+                <p id="pressure" class="data weather__pressure">Loading...</p>
+              </div>
+            </div>
+            <div class="weather__card">
+              <i class="fa-solid fa-gauge-high"></i>
+              <div>
+                <p>Visibility</p>
+                <p id="visibility" class="data weather__pressure">Loading...</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h3 id="currentLocation"><span id="location"></span></h3>
+      </div>
+      <div id="button-area" class="row">
+        <button id="celButton" class="col-xs-3 col-xs-offset-2 active">
+          °C
+        </button>
+        <button id="farButton" class="col-xs-3 col-xs-offset-2">°F</button>
+      </div>
+      <form id="cityForm">
+        <!-- <input type="text" id="cityInput" placeholder="Enter city name" /> -->
+        <div class="form">
+          <input
+            type="text"
+            name="text"
+            autocomplete="off"
+            id="cityInput"
+            required
+          />
+          <!-- <input type="text" name="text" autocomplete="off" required /> -->
+          <label for="text" name="text" class="label-name">
+            <span class="content-name"> Enter city name </span>
+          </label>
+        </div>
+        <button type="submit">Get Weather</button>
+      </form>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
